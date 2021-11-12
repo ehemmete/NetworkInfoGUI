@@ -45,17 +45,17 @@ struct NetworkFunctions {
             if let serviceList = try! NetworkFunctions.getNetworkServices() {
             //    print(serviceList)
                 for service in serviceList {
-                    let service_name = try! NetworkFunctions.getServiceName(service as CFString)!
-                    if let ip_address = try! NetworkFunctions.getIP(service as CFString) {
+                    if let service_name = try! NetworkFunctions.getServiceName(service as CFString),
+                         let ip_address = try! NetworkFunctions.getIP(service as CFString) {
                         //            print("\(service_name):\(ip_address)")
                         output.append(String("\(service_name): \(ip_address)"))
-                    }
-                    if service_name == "Wi-Fi" {
-                        if let wifiInfo = try! NetworkFunctions.getWifiInfo() {
-                            //                print(wifiInfo)
-                            output.append(wifiInfo)
+                        if service_name == "Wi-Fi" {
+                            if let wifiInfo = try! NetworkFunctions.getWifiInfo() {
+                                //                print(wifiInfo)
+                                output.append(wifiInfo)
+                            }
                         }
-                    }
+                    }                    
                 }
             }
             let publicIP = try! NetworkFunctions.getExternalIP()

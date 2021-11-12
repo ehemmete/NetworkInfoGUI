@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14845" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19455" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14845"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19455"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -64,64 +65,79 @@
                         </items>
                     </menu>
                 </menuItem>
-                <menuItem title="Edit" id="Mjo-Ga-b1I">
+                <menuItem title="Edit" id="dEm-kZ-le9">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="Edit" id="HsJ-LS-duR">
+                    <menu key="submenu" title="Edit" id="g0T-xP-VAY">
                         <items>
-                            <menuItem title="Copy" keyEquivalent="c" id="lMl-RQ-mWm">
+                            <menuItem title="Copy" keyEquivalent="c" id="Fpc-G5-rGE">
                                 <connections>
-                                    <action selector="copy:" target="-1" id="zEp-xT-oQK"/>
+                                    <action selector="copy:" target="-1" id="fbb-GS-q7v"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Select All" keyEquivalent="a" id="yzt-Z7-ANt">
+                            <menuItem title="Select All" keyEquivalent="a" id="xb4-d9-vLQ">
                                 <connections>
-                                    <action selector="selectAll:" target="-1" id="c4j-u1-TgH"/>
+                                    <action selector="selectAll:" target="-1" id="eZe-A0-DiY"/>
                                 </connections>
                             </menuItem>
                         </items>
                     </menu>
                 </menuItem>
+                <menuItem title="Font" id="DHM-vB-P9t">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem title="Edit" id="Mjo-Ga-b1I">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
             </items>
             <point key="canvasLocation" x="-191" y="-177"/>
         </menu>
-        <window title="NetworkInfo" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="QvC-M9-y7g">
+        <window title="NetworkInfo" separatorStyle="none" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="0.0" y="0.0" width="260" height="73"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="260" height="73"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wzy-4n-Aks">
-                        <rect key="frame" x="0.0" y="0.0" width="260" height="73"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <textFieldCell key="cell" selectable="YES" borderStyle="bezel" drawsBackground="YES" id="sJe-Sl-D0K">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="wzy-4n-Aks">
+                        <rect key="frame" x="6" y="0.0" width="248" height="73"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="73" id="As6-6M-upv"/>
+                        </constraints>
+                        <textFieldCell key="cell" selectable="YES" drawsBackground="YES" id="sJe-Sl-D0K">
                             <font key="font" metaFont="fixedUser" size="11"/>
                             <string key="title">Service 1: 10.10.10.10
 Service 2: 10.10.10.11
 SSID / Channel@Freq-Width
 External: 17.0.0.0</string>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" red="0.11764705882352941" green="0.11764705882352941" blue="0.11764705882352941" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         </textFieldCell>
                     </textField>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="wzy-4n-Aks" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" id="3Uq-8i-lER"/>
+                    <constraint firstAttribute="trailing" secondItem="wzy-4n-Aks" secondAttribute="trailing" constant="6" id="CbY-p4-QBV"/>
+                    <constraint firstItem="wzy-4n-Aks" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="6" id="Mfx-fp-fEY"/>
+                </constraints>
             </view>
-            <point key="canvasLocation" x="-205" y="241"/>
+            <point key="canvasLocation" x="-205" y="240.5"/>
         </window>
-        <window title="About NetworkInfo" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="ncY-RQ-SGi">
+        <window title="About NetworkInfo" separatorStyle="none" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" id="ncY-RQ-SGi">
             <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="50" y="800" width="262" height="149"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
             <view key="contentView" id="3PR-ak-0rh">
                 <rect key="frame" x="0.0" y="0.0" width="262" height="149"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g0V-LJ-8iQ">
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="g0V-LJ-8iQ">
                         <rect key="frame" x="18" y="15" width="226" height="120"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="120" id="O6v-za-sgf"/>
+                        </constraints>
                         <textFieldCell key="cell" selectable="YES" id="dy8-n4-7B0">
                             <font key="font" usesAppearanceFont="YES"/>
                             <string key="title">A simple utility to disply network information on the screen.
@@ -134,8 +150,13 @@ Written by Eric Hemmeter ©2019</string>
                         </textFieldCell>
                     </textField>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="g0V-LJ-8iQ" firstAttribute="centerY" secondItem="3PR-ak-0rh" secondAttribute="centerY" id="2yf-ZF-T9L"/>
+                    <constraint firstItem="g0V-LJ-8iQ" firstAttribute="leading" secondItem="3PR-ak-0rh" secondAttribute="leading" constant="20" symbolic="YES" id="Jbd-sR-eJ0"/>
+                    <constraint firstAttribute="trailing" secondItem="g0V-LJ-8iQ" secondAttribute="trailing" constant="20" symbolic="YES" id="Qvk-zL-GFV"/>
+                </constraints>
             </view>
-            <point key="canvasLocation" x="185" y="103.5"/>
+            <point key="canvasLocation" x="-242" y="24"/>
         </window>
     </objects>
 </document>
